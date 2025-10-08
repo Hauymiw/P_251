@@ -1,0 +1,122 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+  
+  .header {
+    background-color: #336597;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .header label {
+    padding-left: 20px;
+  }
+  
+  .closeButton {
+    background-color: #336597;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  
+  .box1 {
+    background-color: #d9d9d970;
+    padding: 10px;
+    border: 1px solid rgba(104, 130, 155, 0.4);
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .row label {
+    background-color: #fff;
+    color: #0043F1;
+    border: 1px solid rgba(104, 130, 155, 0.8);
+    padding: 3px 8px; 
+  }
+  
+  label[class="lastlabel"] {
+    flex: 1; 
+    white-space: normal; 
+  }
+  
+  .box2 {
+    display: grid;
+    grid-template-rows: auto 1fr; /* แถวบนเป็นปุ่ม แถวล่างเป็นที่อยู่ */
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(104, 130, 155, 0.4);
+    border-radius: 8px;
+    background-color: #d9d9d970;
+    margin-top: 10px;
+  }
+  
+  
+  .button-box2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    
+    
+  }
+  .button-box2 button {
+    background-color: #336597;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .address {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์เท่ากัน */
+    gap: 10px;
+  }
+  
+  .address div {
+    background-color: #fff;
+    border: 1px solid rgba(104, 130, 155, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .address label {
+    background-color: #336597;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 2px;
+  }
+  
+  .address span {
+    display: block;
+  }
+  
+  .address span {
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 0px solid rgba(104, 130, 155, 0.5);
+    flex: 1; /* ขยายเต็มพื้นที่ที่เหลือ */
+  }
+  

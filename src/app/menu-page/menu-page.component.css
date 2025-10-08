@@ -1,0 +1,42 @@
+.container {
+    background-color: #D9D9D9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.login {
+    position: relative;           
+    text-align: center;
+    background-color: #fff;
+    padding: 60px ;      
+    border-radius: 8px; 
+    width: 300px;
+    height: auto; 
+}
+.menu {
+    display: flex;
+    flex-direction: column; /* ให้ลูกอยู่เป็นแนวตั้ง */
+    gap: 10px;
+    margin-bottom: 40px;              /* ระยะห่างระหว่างปุ่ม */
+}
+
+.menu button {
+    padding: 5px; 
+    cursor: pointer;
+    width: 300px;
+    border-radius: 5px;
+    border: 0px solid;
+    background-color: #086934 ;
+    color: #fff;
+}

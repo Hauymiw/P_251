@@ -1,0 +1,75 @@
+.container { 
+  }
+  
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .filter-bar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+  }
+  
+  .filter-bar li {
+    padding: 5px 10px;
+    background-color: #336597;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .filter-bar li:hover {
+    background-color: #336597;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between; /* filter-bar ซ้าย, search-bar ขวา */
+    align-items: center;            /* จัดแนวตั้งตรงกลาง */
+    gap: 10px;                       /* เว้นช่องว่างระหว่าง element */
+    margin-top: 20px;
+}
+
+
+.table-hp {
+    padding: 20px;
+    
+}
+
+.table-hp table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-hp th, .table-hp td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table-hp th {
+    background-color: #336597;
+    color: white;
+  }
+  
+  .table-hp tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table-hp tr:hover {
+     
+    background-color: #CCC;
+  }
+
+  .search-bar input{
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #6D6D6D;
+  }

@@ -1,0 +1,146 @@
+.container {
+    background-color: #D9D9D9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login {
+    position: relative;           /* ต้องมี relative เพื่อให้ logo absolute อ้างอิง */
+    text-align: center;
+    background-color: #fff; 
+    padding: 60px 20px 20px;      /* เว้นบนให้โลโก้ + label */
+    border-radius: 8px;
+}
+
+.logo {
+    position: absolute;           /* ลอยเหนือขอบบน */
+    top: -60px;                    /* ปรับให้ลอยเหนือ Login */
+    left: 50%;                     /* กึ่งกลางแนวนอน */
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;                   /* อยู่เหนือ Login */
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo label {
+    display: block;
+    margin-top: 10px;              /* เว้นระยะระหว่างรูปกับข้อความ */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.input div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px; 
+}
+
+.container {
+    background-color: #D9D9D9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Login {
+    position: relative;           
+    text-align: center;
+    background-color: #fff;
+    padding: 60px  ;      
+    border-radius: 8px;
+}
+
+.logo {
+    position: absolute;            
+    top: -50px;                    
+    left: 50%;                     
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10; 
+    padding: 20px;                  /* อยู่เหนือ Login */
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo label {
+    display: block;
+    margin-top: 10px;      
+    font-weight: bold;
+    color: #333;
+}
+
+.input {
+    margin-top: 100px;
+    width: 300px;
+    height: auto; 
+    
+}
+
+.input div {
+    position: relative;  /* container ของ input + label */
+    margin-bottom: 20px;
+}
+
+.input label {
+    position: absolute;
+    padding: 5px;
+    top: -15px;               /* ปรับระยะบน label */
+    left: 10px;         
+    font-size: 14px;
+    pointer-events: none; /* คลิกไม่ไปกระทบ label */
+    background-color: #fff;
+    border-radius: 1px;
+    border: 5px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px;
+    padding-top: 10px;    /* เว้นให้ label อยู่ด้านบน */
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #6D6D6D;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b050;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #086934;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
