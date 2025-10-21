@@ -20,7 +20,7 @@
   width: 590px;
   padding: 10px;
 }
-.overlay {
+.overlay { 
   display: flex;
   flex-direction: column;
   margin: 0px; 
@@ -37,10 +37,9 @@
 
 .box3 {
   width: 100%;
-  max-width: 548px; /* กว้างสูงสุด */
+  max-width: 100%; /* กว้างสูงสุด */
   max-height: 735px; /* สูงสุด */
-  height: 500px;
-  width: 548px;
+  height: 500px; 
   border-radius: 8px;
   margin-top: 10px;
   background-color: #ffffff;
@@ -73,6 +72,9 @@
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: normal;
+  padding-left: 8px;
+  text-align: start;
+  
 }
 
 .box3 td {
