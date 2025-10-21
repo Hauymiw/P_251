@@ -1,0 +1,90 @@
+<div class="popup-overlay">
+  <div class="page1">
+    <div class="overlay">
+      <div class="box3">
+        <table>
+          <thead>
+            @for (item of fields; track $index) {
+            <th>
+              {{ item }}
+            </th>
+            }
+          </thead>
+          <tbody>
+            @for (item of contactList; track $index) {
+            <tr>
+              <td>{{ item.contact_number }}</td>
+              <td>{{ item.relationship }}</td>
+              <td>{{ item.call_info }}</td>
+              <td>{{ item.sms_stat }}</td>
+              <td>{{ item.recorded_by }}</td>
+              <td>{{ item.work_datetime }}</td>
+              <td>{{ item.status }}</td>
+              <td>{{ item.received_datetime }}</td>
+            </tr>
+
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="exdetail">
+      <span
+        >ตัวอย่างการคีย์เบอร์โทร 0-2580-7555 หรือ 0-2580-7555-60 (เบอร์ต่อ,PCT
+        กรุณาใส่ไว้ในสถานที่)</span
+      >
+    </div>
+
+    <div style="margin-top: 10px">
+      <label for="">เลือกการเพิ่ม</label>
+      <div class="radio">
+        <div class="radio-option">
+          <input type="radio" name="type" />
+          <label for="visit">1.เบอร์โทร</label>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" name="type" />
+          <label for="visit">2.EMAIL</label>
+        </div>
+
+        <div class="radio-option">
+          <input type="radio" name="type" />
+          <label for="visit">3.LINE</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-grid1">
+        <div class="dds">
+          <label>เบอร์โทร</label>
+          <input type="text" placeholder="กรุณากรอกข้อมูล" />
+        </div>
+
+        <div class="dds">
+          <label>สถานะ</label>
+          <input type="text" placeholder="กรอกข้อความ..." />
+        </div>
+
+        <div class="dds wide">
+          <label>ความสัมพันธ์</label>
+          <input type="text" placeholder="กรุณากรอกข้อมูล" />
+        </div>
+        
+        <div></div>
+        <div class="dds wide">
+            <label>ข้อมูลโทร</label>
+            <input type="text" placeholder="กรุณากรอกข้อมูล" />
+          </div>
+      </div>
+
+      <div></div>
+      <div></div>
+      <div class="btn">
+        <button class="save">บันทึก</button>
+        <button class="close">close</button>
+      </div>
+    </div>
+  </div>
+</div>

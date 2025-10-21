@@ -1,0 +1,194 @@
+/* Overlay ทั่วหน้า */
+.popup-overlay { 
+  color: #333333;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.page1 {
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  width: 590px;
+  padding: 10px;
+}
+.overlay {
+  display: flex;
+  flex-direction: column;
+  margin: 0px; 
+  height: 342px;
+  background-color: #fff;
+  justify-content: center; /* กึ่งกลางแนวนอน */
+  align-items: center;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.box3 {
+  width: 100%;
+  max-width: 548px; /* กว้างสูงสุด */
+  max-height: 735px; /* สูงสุด */
+  height: 500px;
+  width: 548px;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  overflow-x: auto; /* เลื่อนแนวนอนได้ถ้าตารางยาวเกิน */
+  overflow-y: auto; /* เพิ่มเลื่อนแนวตั้ง */
+  margin: 0px;
+}
+
+/* .box3::-webkit-scrollbar {
+    display: none;  
+  } */
+/* .box3 {
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+  } */
+
+.box3 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.box3 th {
+  background-color: #336597;
+  color: #fff;
+  text-align: center;
+  border: 1px solid rgba(104, 130, 155, 0.8);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+
+.box3 td {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.box3 td.wrap {
+  white-space: normal;
+}
+
+.exdetail {
+  padding: 5px;
+  color: red;
+  font-weight: bold;
+}
+
+.radio {
+  display: flex;
+  gap: 16px;
+  border: 1px solid rgba(104, 130, 155, 0.8);
+  width: max-content;
+  background-color: #fff;
+  padding: 0px 20px 0px 20px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.radio-option {
+  display: flex;
+  padding: 8px 10px 8px 10px;
+  border-radius: 5px;
+
+  align-items: center;
+
+  input[type="radio"] {
+    accent-color: #086934;
+    width: 15px;
+    height: 15px;
+  }
+  label {
+    padding-top: 3px;
+  }
+}
+ 
+.dds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  label {
+    padding-right: 10px;
+  }
+}
+.form-grid {
+  margin-top: 10px; /* ✅ ซ้ายเป็น label ขวาเป็น input */
+  gap: 0px;
+  align-items: center;
+}
+.form-grid1 {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+}
+
+.btn {
+  display: flex;
+  justify-content: end;
+
+  button {
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 95px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .save {
+    background-color: #086934;
+  }
+
+  .close {
+    background-color: red;
+  }
+}
+input[type="text"] {
+  padding: 10px 10px;
+  border: 1px solid rgba(104, 130, 155, 0.8);
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #336597;
+  outline: none;
+}
+
+input[type="date"] {
+  width: 30%;
+  padding: 10px 10px;
+  border: 1px solid rgba(104, 130, 155, 0.8);
+  border-radius: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 10px 20px;
+}
+label {
+  text-align: end;
+}
