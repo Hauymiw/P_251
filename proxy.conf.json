@@ -1,0 +1,11 @@
+{
+    "/api/middle": {
+      "target": "https://connect-dev.s11.group",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/api/middle": "/v1/login"
+      }
+    }
+  }
