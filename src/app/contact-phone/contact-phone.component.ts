@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-contact-phone',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './contact-phone.component.css'
 })
 export class ContactPhoneComponent {
+  @Output() close = new EventEmitter<void>();
+  
   fields: string[] = [
     "หมายเลข",
     "ความสัมพันธ์",
@@ -80,5 +82,7 @@ export class ContactPhoneComponent {
     }
   ];
   
-  
+  closePopup() { 
+    this.close.emit(); // ส่ง event กลับไปยัง parent
+  }
 }

@@ -1,5 +1,5 @@
-<div class="popup-overlay">
-  <div class="page1">
+<div class="popup-overlay"  >
+  <div class="page1" (click)="$event.stopPropagation()">
     <div class="overlay">
       <div class="box3">
         <table>
@@ -35,7 +35,7 @@
       >
     </div>
 
-    <div style="margin-top: 10px">
+    <div style="margin-top: 10px   ">
       <label for="">เลือกการเพิ่ม</label>
       <div class="radio">
         <div class="radio-option">
@@ -82,7 +82,7 @@
       <div></div>
       <div class="btn">
         <button class="save">บันทึก</button>
-        <button class="close">close</button>
+        <button class="close"  (click)="closePopup()" >close</button>
       </div>
     </div>
   </div>

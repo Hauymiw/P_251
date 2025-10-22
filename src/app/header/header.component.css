@@ -1,11 +1,14 @@
-.app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #D9D9D9;   
-    color: white;
-}
+.app-header { 
+        background-color: #336597;
+        color: #fff;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding-right: 20px;
+      }
 
 .logo{
     display: flex ;
@@ -14,12 +17,15 @@
 }
 .logo img {
     width: 50px;
-    height: auto;
+    height: auto; 
+    box-shadow: 0 4px 8px rgba(216, 211, 211, 0.3); /* ใส่ shadow */
+    border-radius: 5px; /* ถ้าอยากให้ขอบโค้ง */
 }
+
 
 .logo label {
     padding-left: 20px;
-    color: black;
+    color: #fff;
 }
 
 .nav-menu a {
@@ -31,4 +37,8 @@
 
 .nav-menu a:hover {
     text-decoration: underline;
+}
+
+.UserActive{
+    padding-left: 20px;
 }

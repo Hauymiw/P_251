@@ -1,7 +1,7 @@
 /* Overlay ทั่วหน้า */
 .popup-overlay { 
   color: #333333;
-  font-size: 14px;
+  font-size: 12px;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   margin: 0px; 
-  height: 342px;
+  height: 200px;
   background-color: #fff;
   justify-content: center; /* กึ่งกลางแนวนอน */
   align-items: center;
@@ -48,13 +48,13 @@
   margin: 0px;
 }
 
-/* .box3::-webkit-scrollbar {
+.box3::-webkit-scrollbar {
     display: none;  
-  } */
-/* .box3 {
+  } 
+ .box3 {
     scrollbar-width: none; 
     -ms-overflow-style: none;  
-  } */
+  } 
 
 .box3 table {
   width: 100%;
@@ -106,6 +106,7 @@
   padding: 0px 20px 0px 20px;
   border-radius: 5px;
   margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 .radio-option {
