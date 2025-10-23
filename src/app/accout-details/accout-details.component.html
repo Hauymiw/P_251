@@ -7,7 +7,7 @@
   <div class="box1">
     <div class="row">
       <label for="YYMM">2505</label>
-      <label for="HPNO">{{hpno}}</label>
+      <label for="HPNO">{{ hpno }}</label>
       <label for="NAME">นายพิเศษ ศิริกุล</label>
       <label for="MOTO" class="lastlabel"
         >รถจักรยานยนต์ฮอนด้า WW160AR(TH)(PCX160)</label
@@ -33,14 +33,15 @@
     <div></div>
     <div></div>
     <div class="button-box2">
-      <button (click)="openContactPhone()" >เบอร์โทรศัพย์</button>
+      <button (click)="openContactPhone()">เบอร์โทรศัพย์</button>
 
-      <app-contact-phone *ngIf="showContactPhone"
-      (close)="closeContactPhone()">
+      <app-contact-phone *ngIf="showContactPhone" (close)="closeContactPhone()">
       </app-contact-phone>
       <button (click)="openContracImg()">ดูรูป</button>
-      <app-contact-img *ngIf="showContracImg"
-      (close)="closeContracImg()" ></app-contact-img>
+      <app-contact-img
+        *ngIf="showContracImg"
+        (close)="closeContracImg()"
+      ></app-contact-img>
     </div>
     <div class="address">
       <div class="addc">
@@ -137,25 +138,25 @@
       <div></div>
       <div class="radio">
         <div class="radio-option">
-          <input type="radio" name="type" id="call" checked="true" />
-          <label for="call">คีย์รายละเอียดการโทรติดตาม          </label>
+          <input type="radio" name="mainType" id="call" checked />
+          <label for="call">คีย์รายละเอียดการโทรติดตาม</label>
         </div>
         <div class="radio-option">
-          <input type="radio" name="type" id="visit" />
+          <input type="radio" name="mainType" id="visit" />
           <label for="visit">คีย์รายละเอียดการลงพื้นที่</label>
         </div>
       </div>
     </div>
     <div class="form-grid">
       <label>วันนัด/วันที่จะติดต่อครั้งถัดไป</label>
-      <input type="date" />
+      <input type="date"  [(ngModel)]="nextContactDate" />
 
       <label>ข้อความ</label>
       <input type="text" placeholder="กรอกข้อความ..." />
 
       <label>เบอร์โทรที่ติดต่อล่าสุด</label>
       <input type="text" placeholder="กรุณาเลือกเบอร์ที่ติดต่อล่าสุด" />
-        
+
       <div></div>
       <button>บันทึก</button>
     </div>

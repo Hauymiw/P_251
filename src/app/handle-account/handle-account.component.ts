@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-handle-account',
@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class HandleAccountComponent {
   constructor(private router: Router) {}
   selectedMonth = 'all'; 
+  searchText = '';
   handelcontact = [
     { HPNO: '312-845231', FNAM: 'ธัญญารัตน์', LNAM: 'ละชินลา', DUE: '02/10/2025', CADD: '888 ซ.จตุโชติ 10 ถ.จตุโชติ แขวงออเงิน เขตสายไหม กรุงเทพมหานคร 10220', PMT: '2,123', OD_MON: '1', OD_BATH: '2123', month: 5 },
     { HPNO: '312-394582', FNAM: 'ธัญญารัตน์', LNAM: 'ละชินลา', DUE: '02/10/2025', CADD: '888 ซ.จตุโชติ 10 ถ.จตุโชติ แขวงออเงิน เขตสายไหม กรุงเทพมหานคร 10220', PMT: '2,123', OD_MON: '1', OD_BATH: '2123', month: 4 },
@@ -42,20 +43,52 @@ export class HandleAccountComponent {
   filterdata = [...this.handelcontact];
 
   
-  filterData() {
-    if (this.selectedMonth === 'all') {
-      this.filterdata = [...this.handelcontact];
-      console.log(this.selectedMonth)
-    } else {
-      const monthNum = Number(this.selectedMonth);
-      this.filterdata = this.handelcontact.filter(d => d.month === monthNum);
-      console.log(this.selectedMonth)
-    }
+filterData() {
+  const monthFilter = this.selectedMonth;
+  const searchFilter = this.searchText?.trim() || '';
+
+  this.filterdata = this.handelcontact.filter(item => {
+    const matchMonth =
+      monthFilter === 'all' ||
+      String(item.month) === monthFilter;  
+
+    const matchSearch =
+      !searchFilter ||
+      (item.HPNO && item.HPNO.toString().includes(searchFilter));
+
+    return matchMonth && matchSearch;  
+  });
+
+  console.log('กรองแล้ว:', this.filterdata.length, 'รายการ');
+}
+
+    searchContract() {
+    this.applyFilters();
   }
 
+  applyFilters() {
+    this.filterdata = this.handelcontact.filter(item => {
+      const matchMonth =
+        this.selectedMonth === 'all' ||
+        Number(item.month) === Number(this.selectedMonth);
+        
+        
+      const matchSearch =
+        !this.searchText ||
+        item.HPNO.toString().includes(this.searchText);
+
+      console.log('OD_MON' , item.OD_MON)
+      return matchMonth && matchSearch;
+       
+    });
+  }
+
+  
   selectContract(item: any) {
     this.selectedContract = item;
     this.router.navigate(['/contract-detail', item.HPNO]); 
     console.log('เลือกเลขสัญญา:', item.HPNO);
   }
+
+  
 }

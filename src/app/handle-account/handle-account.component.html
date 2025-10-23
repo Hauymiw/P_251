@@ -29,9 +29,17 @@
     
 
     <div class="search-bar">
-      <input type="" placeholder="ค้นหาเลขสัญญา" />
+      <input
+    type="text"
+    placeholder="ค้นหาเลขสัญญา"
+    [(ngModel)]="searchText"
+    (input)="searchContract()"
+  />
     </div>
   </div>
+
+   
+
 
   <div class="table-hp">
     <table>

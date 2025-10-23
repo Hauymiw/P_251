@@ -1,12 +1,13 @@
-import { Component, inject } from '@angular/core';
-import { ContactPhoneComponent } from "../contact-phone/contact-phone.component";
 import { CommonModule } from '@angular/common';
-import { ContactImgComponent } from "../contact-img/contact-img.component";
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ContactImgComponent } from "../contact-img/contact-img.component";
+import { ContactPhoneComponent } from "../contact-phone/contact-phone.component";
 
 @Component({
   selector: 'app-accout-details',
-  imports: [ContactPhoneComponent, CommonModule, ContactImgComponent],
+  imports: [ContactPhoneComponent, CommonModule, ContactImgComponent , FormsModule],
   templateUrl: './accout-details.component.html',
   styleUrl: './accout-details.component.css'
 })
@@ -18,6 +19,8 @@ export class AccoutDetailsComponent {
   hpno: string | null = null; 
   showContactPhone = false;
   showContracImg = false;
+  nextContactDate: string = new Date().toISOString().split('T')[0];
+
   
   ngOnInit() {
     this.hpno = this.route.snapshot.paramMap.get('hpno'); 
@@ -44,4 +47,5 @@ export class AccoutDetailsComponent {
     this.router.navigate(['Handle-account']);
   }
 
+  
 }
